@@ -1,0 +1,11 @@
+[
+    {
+        "directory": "/home/leoallesch/dev/makebuilder/example",
+        "command": "gcc -Iinclude -Isrc -Wall -Wextra -Werror -Wfatal-errors -Wcast-qual -Wpedantic -Os -g2  -std=c11 -c src/main.c -o build/main.o",
+        "file": "src/main.c"
+    },
+    {
+        "directory": "/home/leoallesch/dev/makebuilder/example",
+        "command": "gcc -Iinclude -Isrc -Wall -Wextra -Werror -Wfatal-errors -Wcast-qual -Wpedantic -Os -g2  -std=c11 -c src/foo.c -o build/foo.o",
+        "file": "src/foo.c"
+    }]

@@ -1,0 +1,13 @@
+mkdir -p build/src/
+echo Compiling main.c.o
+gcc -Iinclude -Isrc -Wall -Wextra -Werror -Wfatal-errors -Wcast-qual -Wpedantic -Os -g2  -MMD -MP -std=c11 -c src/main.c -o build/src/main.c.o
+mkdir -p build/src/
+echo Compiling foo.c.o
+gcc -Iinclude -Isrc -Wall -Wextra -Werror -Wfatal-errors -Wcast-qual -Wpedantic -Os -g2  -MMD -MP -std=c11 -c src/foo.c -o build/src/foo.c.o
+mkdir -p build/
+echo Linking example
+gcc build/src/main.c.o build/src/foo.c.o -o build/example 
+mkdir -p build
+echo "[" > build/compile_commands.json
+first=1; for src in src/main.c src/foo.c; do obj=; if [ "" = "c" ]; then compiler="gcc"; flags="-std=c11"; elif [ "" = "cpp" ]; then compiler="g++"; flags="-std=c++17"; else compiler="gcc"; flags=""; fi; if [ irst -eq 1 ]; then first=0; else echo "," >> build/compile_commands.json; fi; echo "    {" >> build/compile_commands.json; echo "        \"directory\": \"\"," >> build/compile_commands.json; echo "        \"command\": \"ompiler -Iinclude -Isrc -Wall -Wextra -Werror -Wfatal-errors -Wcast-qual -Wpedantic -Os -g2  lags -c rc -o bj\"," >> build/compile_commands.json; echo "        \"file\": \"rc\"" >> build/compile_commands.json; echo "    }" >> build/compile_commands.json; done
+echo "]" >> build/compile_commands.json

@@ -1,0 +1,48 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iinclude",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wfatal-errors",
+      "-Wcast-qual",
+      "-Wpedantic",
+      "-Os",
+      "-g2",
+      "-std=c11",
+      "-c",
+      "-o",
+      "build/src/main.c.o",
+      "src/main.c"
+    ],
+    "directory": "/home/leoallesch/dev/makebuilder/example",
+    "file": "/home/leoallesch/dev/makebuilder/example/src/main.c",
+    "output": "/home/leoallesch/dev/makebuilder/example/build/src/main.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iinclude",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wfatal-errors",
+      "-Wcast-qual",
+      "-Wpedantic",
+      "-Os",
+      "-g2",
+      "-std=c11",
+      "-c",
+      "-o",
+      "build/src/foo.c.o",
+      "src/foo.c"
+    ],
+    "directory": "/home/leoallesch/dev/makebuilder/example",
+    "file": "/home/leoallesch/dev/makebuilder/example/src/foo.c",
+    "output": "/home/leoallesch/dev/makebuilder/example/build/src/foo.c.o"
+  }
+]
