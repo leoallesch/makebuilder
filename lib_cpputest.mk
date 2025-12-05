@@ -12,7 +12,7 @@ LIB_BUILD := $(BUILD_DIR)/$(LIB_NAME)
 LIB_BUILD_LIBS := $(LIB_BUILD)/lib/libCppUTest.a $(LIB_BUILD)/lib/libCppUTestExt.a
 
 # Build command for CppUTest
-LIB_BUILD_CMD := cd $(LIB_BUILD) && $(LIB_HOME)/configure && $(MAKE)
+LIB_BUILD_CMD := cd $(LIB_BUILD) && autoreconf $(LIB_HOME) && $(LIB_HOME)/configure && $(MAKE)
 
 # CppUTest include directory
 LIB_INC_DIRS := $(LIB_HOME)/include
