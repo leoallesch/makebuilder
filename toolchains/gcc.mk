@@ -6,11 +6,10 @@ CPPFLAGS := \
   -Wall \
   -Wextra \
   -Werror \
-  -Wfatal-errors \
-  -Wcast-qual \
-  -Wpedantic \
   -Os \
-  -g2
+  -g2 \
+  -MMD \
+  -MP
 
 CFLAGS := \
   -std=c11
@@ -21,4 +20,3 @@ CXXFLAGS := \
 ASFLAGS :=
 
 LDFLAGS := \
-#   -Wl,Map=$(BUILD_DIR)/$(TARGET).map
