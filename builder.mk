@@ -1,6 +1,7 @@
 TOOLS_PATH := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 
 include $(TOOLS_PATH)/defaults.mk
+include $(TOOLS_PATH)/toolchain.mk
 
 CC = $(TOOLCHAIN_PREFIX)gcc
 CXX = $(TOOLCHAIN_PREFIX)g++
